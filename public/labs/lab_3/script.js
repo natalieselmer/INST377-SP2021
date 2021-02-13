@@ -1,27 +1,27 @@
 /* Put your javascript in here */
-const lists = document.querySelector('.images');
+const listContainer = document.querySelector('.images');
 
-function back() {
-  const last = Array.from(lists.children).slice(4, 7).reverse();
+function goLeft() {
+  const last = Array.from(listContainer.children).slice(4, 7).reverse();
   last.forEach((element) => {
-    lists.removeChild(element);
-    lists.insertBefore(element, lists.children[0]);
+    listContainer.removeChild(element);
+    listContainer.insertBefore(element, listContainer.children[0]);
   });
 }
-function forward() {
-  const first = Array.from(lists.children).slice(0, 3);
+function goRight() {
+  const first = Array.from(listContainer.children).slice(0, 3);
   first.forEach((element) => {
-    lists.removeChild(element);
-    lists.appendChild(element);
+    listContainer.removeChild(element);
+    listContainer.appendChild(element);
   });
 }
 
 function loadPage() {
   document.querySelector('button.arrow.prev').addEventListener('click', (event) => {
-    back();
+    goLeft();
   });
   document.querySelector('button.arrow.next').addEventListener('click', (event) => {
-    forward();
+    goRight();
   });
 }
 window.onload = loadPage;
