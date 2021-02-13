@@ -4,14 +4,14 @@ const listContainer = document.querySelector('.images');
 function goLeft() {
   const last = Array.from(listContainer.children).slice(4, 7).reverse();
   last.forEach((element) => {
-    listContainer.revmoveChild(element);
+    listContainer.removeChild(element);
     listContainer.insertBefore(element, listContainer.children[0]);
   });
 }
 function goRight() {
   const first = Array.from(listContainer.children).slice(0, 3);
   first.forEach((element) => {
-    listContainer.revmoveChild(element);
+    listContainer.removeChild(element);
     listContainer.appendChild(element);
   });
 }
