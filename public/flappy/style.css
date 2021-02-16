@@ -4,7 +4,7 @@
     position: absolute; /*absolute = this is positioned relative to the parents (game container) position*/
 }
 .sky{
-    background-color: light-blue;
+    background-color: blue;
     width: 500px;
     height: 580px;
     position: absolute;
@@ -14,4 +14,6 @@
     width: 500px;
     height: 150px; /* 730px - 580px so height of sky fits in remaining space*/
     position: absolute; 
+    top: 580px; /*top gives spacing between the top of the element and the parent element. 
+    Ground is below sky. So we put height of sky there*/
 }
