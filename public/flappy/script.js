@@ -41,12 +41,19 @@ function generateObstacle(){
 
     function moveObstacle(){
         obstacleleft -=2
-        obstacle.style.left = obstacleLeft
-        
+        obstacle.style.left = obstacleLeft + 'px'
+
+        if (obstacleLeft == -60){
+            clearInterval(timerId)
+            gameDisplay.removeChild(obstacle)
+        }
+
     }
     let timerId = setinterval(moveObstacle, 20)
-
+    setTimeout(generateObstacle, 3000)
 
 }
+
+generateObstacle()
 
 })
