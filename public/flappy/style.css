@@ -1,72 +1,78 @@
-body{
+body {
     display: flex;
 }
+
 .game-container {
     width: 500px;
     height: 730px;
-    position: absolute; /*absolute = this is positioned relative to the parents (game container) position*/
-    left: 80px
+    position: absolute;
+    left: 80px;
 }
 
-.border-left{
-     width: 80px;
+.border-left {
+    width: 80px;
     height: 790px;
-    position: absolute;
-    background-repeat: white
+    position:  absolute;
+    background-color: white;
     z-index: +2;
 }
 
-.border-right{
+.border-right {
     width: 80px;
     height: 790px;
     position: absolute;
-    background-repeat: white;
+    background-color: white;
     z-index: +2;
     left: 580px;
-} 
-.border-top{
+}
+
+.border-top {
     width: 660px;
     height: 50px;
     position:  absolute;
     background-color: white;
     z-index: +2;
     top: -50px;
-} 
+}
 
-.sky{
+.sky {
     background-image: url('fb-game-background.png');
     width: 500px;
     height: 580px;
     position: absolute;
 }
-.ground{
+
+.ground {
     background-image: url('bottom-background.png');
     width: 500px;
-    height: 150px; /* 730px - 580px so height of sky fits in remaining space*/
-    position: absolute; 
-    top: 580px; /*top gives spacing between the top of the element and the parent element. 
-    Ground is below sky. So we put height of sky there*/
+    height: 150px;
+    position: absolute;
+    top: 580px;
     z-index: +1;
 }
-.bird{
- background-image: url('flappy-bird.png');
-    position: absolute; 
+
+.bird {
+    background-image: url('flappy-bird.png');
+    position: absolute;
+    width: 60px;
     height: 45px;
-    width: 60px;  
-}
-.obstacle{
-     background-image: url('flappybird-pipe.png');
-   width: 60px;
-   height: 300px;
-   position: absolute;
+    left: 220px;
+    bottom: 100px;
 }
 
-.topObstacle{
-     background-image: url('flappybird-pipe.png');
-     transform: rotate(180deg);
-   width: 60px;
-   height: 300px;
-   position: absolute;
+.obstacle {
+    background-image: url('flappybird-pipe.png');
+    width: 60px;
+    height: 300px;
+    position: absolute;
+}
+
+.topObstacle {
+    background-image: url('flappybird-pipe.png');
+    transform: rotate(180deg);
+    width: 60px;
+    height: 300px;
+    position: absolute;
 }
 
 @keyframes slideright {
