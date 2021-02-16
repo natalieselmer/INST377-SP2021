@@ -28,4 +28,13 @@ function jump() {
 
 document.addEventListener('keyup', control)
 
+function generateObstacle(){
+    const obstacle = document.createElement('div')
+    obstacle.classList.add('obstacle')
+    gameDisplay.appendChild(obstacle)
+    /*putting div into game container^ */
+    
+
+}
+
 })
