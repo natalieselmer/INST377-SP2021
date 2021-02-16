@@ -15,9 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   let timerId = setInterval(startGame,20)
 
+  /* 32 is the keycode for the spacebar */
   function control(e){
       if (e.keyCode == 32)
-      jump()/* 32 is the keycode for the spacebar */
+      jump()
   }
 
 function jump() {
@@ -29,11 +30,22 @@ function jump() {
 document.addEventListener('keyup', control)
 
 function generateObstacle(){
+    let obstacleLeft = 500
+    let randomHeight = Math.random() * 60
+    let obstacleBottom = randomHeight
     const obstacle = document.createElement('div')
     obstacle.classList.add('obstacle')
     gameDisplay.appendChild(obstacle)
-    /*putting div into game container^ */
-    
+    obstacle.style.left = obstacleLeft + 'px'
+    obstacle.style.bottom = obstacleBottom + 'px'
+
+    function moveObstacle(){
+        obstacleleft -=2
+        obstacle.style.left = obstacleLeft
+        
+    }
+    let timerId = setinterval(moveObstacle, 20)
+
 
 }
 
