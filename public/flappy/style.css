@@ -1,0 +1,17 @@
+.game-container {
+    width: 500px;
+    height: 730px;
+    position: absolute; /*absolute = this is positioned relative to the parents (game container) position*/
+}
+.sky{
+    background-color: light-blue;
+    width: 500px;
+    height: 580px;
+    position: absolute;
+}
+.ground{
+     background-color: lbrown;
+    width: 500px;
+    height: 150px; /* 730px - 580px so height of sky fits in remaining space*/
+    position: absolute; 
+}
