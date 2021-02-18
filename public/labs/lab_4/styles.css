@@ -69,7 +69,6 @@ body {
 .flex-outer li textarea {
   padding: 15px;
   border: none;
-  width: 80px;
 }
 
 .flex-outer li button {
