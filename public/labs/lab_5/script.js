@@ -1,3 +1,14 @@
+const searchInput = document.querySelector('.search');
+const suggestions = document.querySelector('.suggestions');
+
+  let places = [];
+  /*async function windowActions() {
+    console.log('window loaded');
+    const request = await fetch(
+      "https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json"
+    );
+    places = await request.json([]);
+  }*/
 function mapInit() {
   // follow the Leaflet Getting Started tutorial here
   const mymap = L.map('mapid').setView([-76.9378, 38.9897], 13)
@@ -7,26 +18,13 @@ function mapInit() {
     id: 'mapbox/streets-v11',
     tileSize: 512,
     zoomOffset: -1,
-    accessToken: 'your.mapbox.access.token'
+    accessToken: 'pk.eyJ1IjoibmF0YWxpZXNlbG1lciIsImEiOiJja20yYno4djUxNXdkMnZxbTkyZDNya25kIn0.pt1fo8spQ3yYmYDVYid41g'
 }).addTo(mymap);
 
   return map;
 }
-
 async function dataHandler(mapObjectFromFunction) {
   // use your assignment 1 data handling code here
-
-  const searchInput = document.querySelector('.search');
-  const suggestions = document.querySelector('.suggestions');
-
-  let places = [];
-  async function windowActions() {
-    console.log('window loaded');
-    const request = await fetch(
-      "https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json"
-    );
-    places = await request.json([]);
-  }
 
   function displayMatches(e) {
     e.preventDefault();
