@@ -18,12 +18,12 @@ console.log('mymap', mymap);
 
   // follow the Leaflet Getting Started tutorial here
 
-async function dataFilter(mapObjectFromFunction) {
+/*async function dataFilter(mapObjectFromFunction) {
 const form = document.querySelector('#search-form');
 const searched= document.querySelector('searched');
-const targetList= document.querySelector('.target-list');
+const targetList= document.querySelector('.suggestions');
 const replyMessage= document.querySelector('.reply-message'); 
-}
+}*/
 
 async function dataHandler(mapObjectFromFunction) {
   // use your assignment 1 data handling code here
